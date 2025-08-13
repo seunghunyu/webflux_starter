@@ -1,0 +1,9 @@
+server:
+  port: 8119
+
+logging:
+  level:
+    root: INFO
+
+
+

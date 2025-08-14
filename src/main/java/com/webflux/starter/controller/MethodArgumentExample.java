@@ -1,14 +1,13 @@
 package com.webflux.starter.controller;
 
+import com.webflux.starter.user.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
@@ -48,6 +47,5 @@ public class MethodArgumentExample {
         String userAgent = exchange.getRequest().getHeaders().getFirst("User-Agent");
         return Mono.just("User-Agent: " + (userAgent != null ? userAgent : "Unknown"));
     }
-
 
 }
